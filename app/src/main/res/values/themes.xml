@@ -1,0 +1,12 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.QRCode" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <item name="android:splitMotionEvents">false</item>
+    </style>
+
+    <style name="Theme.Splash" parent="Base.Theme.QRCode">
+        <item name="fontFamily">@font/source_sans_3_regular</item>
+        <item name="android:splitMotionEvents">false</item>
+    </style>
+</resources>

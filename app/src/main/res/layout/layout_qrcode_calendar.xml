@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/dp_17"
+    android:orientation="vertical">
+
+    <com.bkplus.scan_qrcode_barcode.ui.qrcode.widget.BaseInputFieldView
+        android:id="@+id/viewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_17">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_24"
+            android:text="@string/qr_code_all_day"
+            android:textColor="#8E8E8E"
+            android:textSize="@dimen/dp_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:thumbTint="#E6E6E6"
+            app:trackTint="#A4A4A4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.bkplus.scan_qrcode_barcode.ui.qrcode.widget.BaseInputSelectionView
+        android:id="@+id/viewDayStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_17" />
+
+    <com.bkplus.scan_qrcode_barcode.ui.qrcode.widget.BaseInputSelectionView
+        android:id="@+id/viewDayEnd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_17" />
+
+    <com.bkplus.scan_qrcode_barcode.ui.qrcode.widget.BaseInputDescriptionView
+        android:id="@+id/viewDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_17" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

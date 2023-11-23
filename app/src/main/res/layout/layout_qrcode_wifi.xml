@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/dp_17">
+
+    <com.bkplus.scan_qrcode_barcode.ui.qrcode.widget.BaseInputFieldView
+        android:id="@+id/viewSSID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/spinnerContainer"
+        android:layout_marginTop="@dimen/dp_17"
+        android:background="@drawable/bg_base_input_field"
+        android:animateLayoutChanges="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.bkplus.scan_qrcode_barcode.ui.qrcode.widget.CustomSpinner
+            android:id="@+id/wifiTypeList"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_base_input_field"
+            android:dropDownWidth="match_parent"
+            android:minHeight="50dp"
+            android:popupBackground="@drawable/bg_base_input_field"
+            android:popupElevation="0dp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/dropdownIcon"
+            app:layout_constraintTop_toTopOf="@id/wifiTypeList"
+            app:layout_constraintBottom_toBottomOf="@id/wifiTypeList"
+            app:layout_constraintEnd_toEndOf="@id/wifiTypeList"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:src="@drawable/ic_back_black"
+            android:layout_width="10dp"
+            android:layout_height="10dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.bkplus.scan_qrcode_barcode.ui.qrcode.widget.BaseInputFieldView
+        android:id="@+id/viewPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_17" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

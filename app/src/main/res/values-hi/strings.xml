@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Preferences - Locale -->
+
+    <!-- Common -->
+    <string name="ad" translatable="false" tools:ignore="UnusedResources">Ad</string>
+    <string name="loading_ads">लोडिंग विज्ञापन…</string>
+    <string name="cancel">रद्द करना</string>
+    <string name="qr_code">क्यूआर कोड</string>
+    <string name="barcode">बारकोड</string>
+    <string name="qr_code_scanner">क्यूआर कोड स्कैनर</string>
+    <string name="language">भाषा</string>
+    <string name="privacy_policy">गोपनीयता नीति</string>
+    <string name="card">कार्ड</string>
+    <string name="calendar">पंचांग</string>
+    <string name="sms">एसएमएस</string>
+    <string name="email">ईमेल</string>
+    <string name="phone">फ़ोन</string>
+    <string name="contact">संपर्क</string>
+    <string name="text">लेख</string>
+    <string name="wifi">वाई - फाई</string>
+    <string name="website">वेबसाइट</string>
+    <string name="rate" translatable="false">Rate</string>
+    <string name="name">नाम</string>
+    <string name="phone_number">फ़ोन नंबर</string>
+    <string name="address">पता</string>
+    <string name="dob">जन्म तिथि</string>
+    <string name="job">नौकरी</string>
+    <string name="network_name">नेटवर्क नाम (एसएसआईडी)</string>
+    <string name="password">पासवर्ड</string>
+
+    <!--    QR Code-->
+    <string name="qr_code_all_day">पूरे दिन</string>
+    <string name="qr_code_description">विवरण</string>
+    <string name="qr_code_title">शीर्षक</string>
+    <string name="qr_code_day_start">दिन की शुरुआत</string>
+    <string name="qr_code_day_end">दिन का अंत</string>
+    <string name="qr_code_create_qr">QR कोड बनाएँ</string>
+    <string name="qr_code_enter_text">लिखना प्रारम्भ करें</string>
+    <string name="qr_code_name_contact">नाम</string>
+    <string name="qr_code_number_contact">फ़ोन नंबर</string>
+    <string name="qr_code_email_contact">मेल पता</string>
+    <string name="qr_code_error_start_date">कृपया प्रारंभ तिथि चुनें</string>
+    <string name="qr_code_error_end_date">कृपया अंतिम तिथि चुनें</string>
+    <string name="qr_code_error_range_date">कृपया फिर से अंतिम तिथि चुनें</string>
+    <string name="qr_code_error_date_of_birth">कृपया जन्म तिथि चुनें</string>
+    <string name="qr_code_error_website">कृपया वेबसाइट दर्ज करें</string>
+    <string name="qr_code_error_name_contact">कृपया नाम दर्ज करें</string>
+    <string name="qr_code_error_phone_contact">कृपया फ़ोन नंबर दर्ज करें</string>
+    <string name="qr_code_error_email_contact">कृपया ईमेल दर्ज करें</string>
+    <string name="qr_code_error_text">कृपया पाठ दर्ज करें</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <!--    Menu setting-->
+
+    <!--    QR code history-->
+
+</resources>

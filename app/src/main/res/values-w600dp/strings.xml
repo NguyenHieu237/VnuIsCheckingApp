@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Preferences - Locale -->
+
+    <!-- Common -->
+    <string name="ad" translatable="false" tools:ignore="UnusedResources">Ad</string>
+    <string name="loading_ads">Loading ads…</string>
+    <string name="cancel">Cancel</string>
+    <string name="qr_code">QR Code</string>
+    <string name="barcode" translatable="false">Barcode</string>
+    <string name="qr_code_scanner">QR Code Scanner</string>
+    <string name="language">Language</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="card">Card</string>
+    <string name="calendar">Calendar</string>
+    <string name="sms">SMS</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="contact">Contact</string>
+    <string name="text">Text</string>
+    <string name="wifi">Wifi</string>
+    <string name="website">Website</string>
+    <string name="rate" translatable="false">Rate</string>
+    <string name="name">Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="address">Address</string>
+    <string name="dob">DOB</string>
+    <string name="job">Job</string>
+    <string name="network_name">Network name(SSID)</string>
+    <string name="password">Password</string>
+
+    <!--    QR Code-->
+    <string name="qr_code_all_day">All Day</string>
+    <string name="qr_code_description">Description</string>
+    <string name="qr_code_title">Title</string>
+    <string name="qr_code_day_start">Day Start</string>
+    <string name="qr_code_day_end">Day End</string>
+    <string name="qr_code_create_qr">Create QR code</string>
+    <string name="qr_code_enter_text">Enter Text</string>
+    <string name="qr_code_name_contact">Name</string>
+    <string name="qr_code_number_contact">Phone Number</string>
+    <string name="qr_code_email_contact">Email Address</string>
+    <string name="qr_code_error_start_date">Please choose start date</string>
+    <string name="qr_code_error_end_date">Please choose end date</string>
+    <string name="qr_code_error_range_date">Please choose end date again</string>
+    <string name="qr_code_error_date_of_birth">please choose date of birth</string>
+    <string name="qr_code_error_website">please enter website</string>
+    <string name="qr_code_error_name_contact">please enter Name</string>
+    <string name="qr_code_error_phone_contact">please enter Phone number</string>
+    <string name="qr_code_error_email_contact">please enter Email</string>
+    <string name="qr_code_error_text">please enter text</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <!--    Menu setting-->
+
+    <!--    QR code history-->
+
+</resources>

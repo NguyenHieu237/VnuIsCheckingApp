@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/dp_17"
+    android:background="@color/white">
+
+    <com.bkplus.scan_qrcode_barcode.ui.qrcode.widget.BaseInputFieldView
+        android:id="@+id/viewName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.bkplus.scan_qrcode_barcode.ui.qrcode.widget.BaseInputFieldView
+        android:id="@+id/viewPhoneNumber"
+        android:layout_marginTop="@dimen/dp_17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.bkplus.scan_qrcode_barcode.ui.qrcode.widget.BaseInputFieldView
+        android:id="@+id/viewEmail"
+        android:layout_marginTop="@dimen/dp_17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.bkplus.scan_qrcode_barcode.ui.qrcode.widget.BaseInputFieldView
+        android:id="@+id/viewAddress"
+        android:layout_marginTop="@dimen/dp_17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.bkplus.scan_qrcode_barcode.ui.qrcode.widget.BaseInputSelectionView
+        android:id="@+id/viewDateOfBirth"
+        android:layout_marginTop="@dimen/dp_17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.bkplus.scan_qrcode_barcode.ui.qrcode.widget.BaseInputFieldView
+        android:id="@+id/viewJob"
+        android:layout_marginTop="@dimen/dp_17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

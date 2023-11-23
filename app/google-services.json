@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "871245092811",
+    "project_id": "qrcode-all-in-one",
+    "storage_bucket": "qrcode-all-in-one.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:871245092811:android:be9c4003eff08757fa484e",
+        "android_client_info": {
+          "package_name": "com.qrcodegenerator.qrcodescan.allinone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "871245092811-p6r2v1p4an6ia36tko55ko8bi0do9j4i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCitx0x1zaCU8ezSimr3vOikUR9X7Ui-zo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "871245092811-p6r2v1p4an6ia36tko55ko8bi0do9j4i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

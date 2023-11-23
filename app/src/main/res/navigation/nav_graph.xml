@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/home_nav_fragment">
+
+    <fragment
+        android:id="@+id/home_nav_fragment"
+        android:name="com.bkplus.scan_qrcode_barcode.ui.home.HomeNavFragment"
+        android:label="HomeNavFragment"
+        tools:layout="@layout/fragment_home_nav">
+        <action
+            android:id="@+id/actionGoToCreateQRCodeFragment"
+            app:destination="@id/createQRCodeFragment" />
+        <action
+            android:id="@+id/action_home_nav_fragment_to_fragment_language"
+            app:destination="@id/fragment_language" />
+
+        <action
+            android:id="@+id/actionGoToScanResultFragment"
+            app:destination="@id/scanResultFragment">
+
+            <argument
+                android:name="result"
+                app:argType="com.bkplus.scan_qrcode_barcode.manager.qrcode.GenerateQRCodeResult"
+                app:nullable="true" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_language"
+        android:name="com.bkplus.scan_qrcode_barcode.ui.language.SettingLanguageFragment"
+        android:label="LanguageFragment"
+        tools:layout="@layout/fragment_language">
+        <action
+            android:id="@+id/action_fragment_language_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </fragment>
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.bkplus.scan_qrcode_barcode.ui.home.HomeActivity"
+        android:label="HomeActivity"
+        tools:layout="@layout/fragment_home_nav" />
+
+    <fragment
+        android:id="@+id/scannerFragment"
+        android:name="com.bkplus.scan_qrcode_barcode.ui.scanner.ScannerFragment"
+        android:label="ScannerFragment"
+        tools:layout="@layout/fragment_scanner">
+        <action
+            android:id="@+id/action_scannerFragment_to_generatorFragment"
+            app:destination="@id/generatorFragment" />
+
+        <action
+            android:id="@+id/actionGoToScanResultFragment"
+            app:destination="@id/scanResultFragment">
+            <argument
+                android:name="result"
+                app:argType="com.bkplus.scan_qrcode_barcode.manager.qrcode.GenerateQRCodeResult"
+                app:nullable="true" />
+        </action>
+        <action
+            android:id="@+id/goToSelectAlbum"
+            app:destination="@id/selectAlbumFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectAlbumFragment"
+        android:name="com.bkplus.scan_qrcode_barcode.ui.scanner.gallery.AlbumFragment"
+        android:label="AlbumFragment"
+        tools:layout="@layout/fragment_album">
+        <action
+            android:id="@+id/gotoResultGalley"
+            app:destination="@id/scanResultFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/generatorFragment"
+        android:name="com.bkplus.scan_qrcode_barcode.ui.generator.GeneratorFragment"
+        android:label="GeneratorFragment"
+        tools:layout="@layout/fragment_generator">
+        <action
+            android:id="@+id/actionGoToCreateQRCodeFragment"
+            app:destination="@id/createQRCodeFragment" />
+        <action
+            android:id="@+id/actionGoToQRCodeHistoryFragment"
+            app:destination="@id/qRCodeHistoryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/qRCodeHistoryFragment"
+        android:name="com.bkplus.scan_qrcode_barcode.ui.qrcode.history.QRCodeHistoryFragment"
+        android:label="QRCodeHistoryFragment"
+        tools:layout="@layout/fragment_qrcode_history">
+        <action
+            android:id="@+id/actionGoToScanResultFragment"
+            app:destination="@id/scanResultFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createQRCodeFragment"
+        android:name="com.bkplus.scan_qrcode_barcode.ui.qrcode.create_qrcode.CreateQRCodeFragment"
+        android:label="CreateQRCodeFragment"
+        tools:layout="@layout/fragment_create_qrcode">
+
+        <argument
+            android:name="generatorItem"
+            app:argType="com.bkplus.scan_qrcode_barcode.model.GeneratorItem"
+            app:nullable="true" />
+
+        <action
+            android:id="@+id/actionGoToScanResultFragment"
+            app:destination="@id/scanResultFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/scanResultFragment"
+        android:name="com.bkplus.scan_qrcode_barcode.ui.scanner.ScanResultFragment"
+        android:label="ScanResultFragment"
+        tools:layout="@layout/fragment_scan_result">
+
+        <argument
+            android:name="result"
+            app:argType="com.bkplus.scan_qrcode_barcode.manager.qrcode.GenerateQRCodeResult"
+            app:nullable="true" />
+    </fragment>
+
+</navigation>

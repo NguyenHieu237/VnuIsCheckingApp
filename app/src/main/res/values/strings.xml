@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Preferences - Locale -->
+
+    <!-- Common -->
+    <string name="app_name" translatable="false" tools:ignore="UnusedResources">QR &amp; Barcode Scanner, Generator</string>
+    <string name="ad" translatable="false" tools:ignore="UnusedResources">Ad</string>
+    <!-- Barcode -->
+    <string name="ean8" translatable="false">EAN_8</string>
+    <string name="ean13" translatable="false">EAN_13</string>
+    <string name="upce" translatable="false">UPC_E</string>
+    <string name="upca" translatable="false">UPC_A</string>
+    <string name="code39" translatable="false">CODE_39</string>
+    <string name="code93" translatable="false">CODE_93</string>
+    <string name="code128" translatable="false">CODE_128</string>
+    <string name="itf" translatable="false">ITF</string>
+    <string name="codabar" translatable="false">CODABAR</string>
+    <string name="pdf417" translatable="false">PDF_417</string>
+    <string name="data_matrix" translatable="false">DATA_MATRIX</string>
+    <string name="aztec" translatable="false">AZTEC</string>
+
+    <string name="facebook_app_id" translatable="false">1</string>
+    <string name="facebook_token_id" translatable="false">1</string>
+
+    <string name="loading_ads">Loading ads…</string>
+    <string name="cancel">Cancel</string>
+    <string name="qr_code">QR Code</string>
+    <string name="barcode" translatable="false">Barcode</string>
+    <string name="qr_code_scanner">QR Code Scanner</string>
+    <string name="language">Language</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="card">Card</string>
+    <string name="calendar">Calendar</string>
+    <string name="sms">SMS</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="contact">Contact</string>
+    <string name="text">Text</string>
+    <string name="wifi">Wifi</string>
+    <string name="website">Website</string>
+    <string name="rate" translatable="false">Rate</string>
+    <string name="name">Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="address">Address</string>
+    <string name="dob">DOB</string>
+    <string name="job">Job</string>
+    <string name="network_name">Network name(SSID)</string>
+    <string name="password">Password</string>
+
+    <!--    QR Code-->
+    <string name="qr_code_all_day">All Day</string>
+    <string name="qr_code_description">Description</string>
+    <string name="qr_code_title">Title</string>
+    <string name="qr_code_day_start">Day Start</string>
+    <string name="qr_code_day_end">Day End</string>
+    <string name="qr_code_create_qr">Create QR code</string>
+    <string name="qr_code_enter_text">Enter Text</string>
+    <string name="qr_code_name_contact">Name</string>
+    <string name="qr_code_number_contact">Phone Number</string>
+    <string name="qr_code_email_contact">Email Address</string>
+    <string name="qr_code_error_start_date">Please choose start date</string>
+    <string name="qr_code_error_end_date">Please choose end date</string>
+    <string name="qr_code_error_range_date">Please choose end date again</string>
+    <string name="qr_code_error_date_of_birth">please choose date of birth</string>
+    <string name="qr_code_error_website">please enter website</string>
+    <string name="qr_code_error_name_contact">please enter Name</string>
+    <string name="qr_code_error_phone_contact">please enter Phone number</string>
+    <string name="qr_code_error_email_contact">please enter Email</string>
+    <string name="qr_code_error_text">please enter text</string>
+
+    <!--    Menu setting-->
+    <string name="general_settings">General Settings</string>
+    <string name="beep">Beep</string>
+    <string name="beep_when_t">Beep when the scan is successful</string>
+    <string name="vibration">Vibration</string>
+    <string name="search_engine">Search Engine</string>
+    <string name="share">Share</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="remove_ads">Remove Ads</string>
+    <string name="about_version">About Version</string>
+    <string name="google">Google</string>
+    <string name="bing">Bing</string>
+    <string name="baidu">Baidu</string>
+    <string name="yahoo">Yahoo</string>
+    <string name="duck">DuckDuckGo</string>
+    <string name="ecosia">Ecosia</string>
+    <string name="yandex">Yandex</string>
+    <string name="version">version %s</string>
+
+    <!--    QR code history-->
+    <string name="delete">Delete</string>
+    <string name="delete_his">Delete History</string>
+    <string name="delete_areyou">Are you sure you want to clear history?</string>
+    <string name="delete_are">Are you sure you want to \npermanently delete this item?</string>
+
+
+    <string name="no_history">No History</string>
+
+    <string name="we_want">We want to get Camera access to be\n able to scan QRCode/Barcode</string>
+    <string name="why_do_we_n">Why do we need \npermissions?</string>
+    <string name="easily_scan_qr_code">Easily scan all QR Code with your device</string>
+    <string name="barcode_scanner">Barcode Scanner</string>
+    <string name="easily_scan_all_barcode">Easily scan all Barcode with your device</string>
+    <string name="create_qr_code_barcode">Create QR Code/ Barcode</string>
+    <string name="generate_qr_code_barcode_quickly">Generate QR Code/ Barcode quickly from your phone</string>
+    <string name="next">Next</string>
+    <string name="get_start">Get Start</string>
+
+    <!-- Social Media-->
+    <string name="facebook">Facebook</string>
+    <string name="instagram">Instagram</string>
+    <string name="messenger">Messenger</string>
+    <string name="youtube">Youtube</string>
+    <string name="linkedin">Linkedin</string>
+    <string name="telegram">Telegram</string>
+    <string name="twitter">Twitter</string>
+    <string name="paypal">Paypal</string>
+
+    <!-- Gallery-->
+    <string name="album">Select Album</string>
+    <string name="photo">Select Photo</string>
+
+    <!-- Barcode -->
+    <string name="enter_text">Enter text</string>
+
+    <!-- Generate Barcode Hint -->
+    <string name="hint_ean8">Enter 8 digits</string>
+    <string name="hint_ean13">Enter 12 digits + 1 checksum digit</string>
+    <string name="hint_upce">Enter 8 digits</string>
+    <string name="hint_upca">Enter 12 digits</string>
+    <string name="hint_39">Enter text in upper case without special characters</string>
+    <string name="hint_93">Enter text in upper case without special characters</string>
+    <string name="hint_128">Enter text without special characters</string>
+    <string name="hint_itf">Enter even number of digits</string>
+    <string name="hint_codabar">Enter digits</string>
+    <string name="hint_pdf417">Enter text</string>
+    <string name="hint_data_matrix">Enter text without special characters</string>
+    <string name="hint_aztec">Enter text without special characters</string>
+    <string name="invalid_form_39">Invalid text for format CODE 39</string>
+    <string name="invalid_form_93">Invalid text for format CODE 93</string>
+    <string name="invalid_form_128">Invalid text for format CODE 128</string>
+    <string name="invalid_form_417">Invalid text for format PDF417</string>
+    <string name="invalid_form_aztec">Invalid text for format AZTEC</string>
+    <string name="invalid_form_upce">Invalid text for format UPC-E</string>
+    <string name="invalid_form_upca">Invalid text for format UPC-A</string>
+    <string name="invalid_form_ean8">Invalid text for format EAN 8</string>
+    <string name="invalid_form_ean13">Invalid text for format EAN 13</string>
+    <string name="invalid_form_ITF">Invalid text for format ITF</string>
+
+    <string name="clipboard">Clipboard</string>
+
+    <string name="history">History</string>
+    <string name="setting">Setting</string>
+    <string name="create">Create</string>
+    <string name="scan">Scan</string>
+
+    <string name="setting_en">English</string>
+    <string name="setting_spain">Spanish</string>
+    <string name="setting_hindi">Hindi</string>
+    <string name="setting_france">France</string>
+    <string name="setting_chinese">Chinese</string>
+    <string name="setting_portuguese">Portuguese</string>
+    <string name="setting_bengal">Bengal</string>
+    <string name="setting_german">German</string>
+    <string name="settings">Settings</string>
+    <string name="help">Help</string>
+    <string name="my_card">My card</string>
+    <string name="contacts">Contacts</string>
+    <string name="barcode_data_matrix">Barcode Data Matrix</string>
+    <string name="barcode_pdf_147">Barcode PDF 147</string>
+    <string name="barcode_aztec">Barcode Aztec</string>
+    <string name="copied_to_clipboard">Copied to clipboard</string>
+    <string name="rate_title">Please give us your feedback so we can improve the app</string>
+    <string name="download">Download</string>
+    <string name="ok">OK</string>
+    <string name="terms_of_use">Terms of use</string>
+    <string name="general">General</string>
+    <string name="personal">Personal</string>
+    <string name="social">Social</string>
+    <string name="copy">Copy</string>
+    <string name="title">Title:</string>
+    <string name="start">Start:</string>
+    <string name="end">End:</string>
+    <string name="note">Note:</string>
+    <string name="add_to_events">Add to events</string>
+    <string name="send_to_email">Send to email</string>
+    <string name="add_to_contacts">Add to Contacts</string>
+    <string name="call">Call</string>
+    <string name="show_to_map">Show to map</string>
+    <string name="content">Content:</string>
+    <string name="send_to_sms">Send to SMS</string>
+    <string name="open">Open</string>
+    <string name="type">Type:</string>
+    <string name="connect_to_wifi">Connect to WIFI</string>
+    <string name="copy_to_password">Copy to Password</string>
+
+    <string name="please_enter_address">Please Enter Address</string>
+    <string name="please_enter_job">Please enter Job</string>
+    <string name="not_a_telephone_number">Not a telephone number</string>
+    <string name="invalid_email">Invalid Email</string>
+    <string name="duplicate_white_space">Duplicate white space detected</string>
+    <string name="text_message">Text message</string>
+    <string name="please_input_sms">Please input SMS text</string>
+    <string name="repetitive_white_spaces">Repetitive white spaces detected</string>
+    <string name="url_contain_space">Url contain white space</string>
+    <string name="invalid_url">Invalid URL </string>
+    <string name="ssid_pass_is_empty">Either SSID or Pass is Empty</string>
+    <string name="success">Success</string>
+    <string name="failure">Failure</string>
+    <string name="out_of_range">Out of Range</string>
+
+    <string name="in_app_reviewflow_fail">In App ReviewFlow failed to start</string>
+    <string name="rating_complete">Rating complete</string>
+    <string name="rating_failed">Rating failed</string>
+    <string name="please_choose_start_date_again">Please choose start date again</string>
+    <string name="please_choose_birthday_again">Please choose birthday again</string>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/dp_17">
+    <com.bkplus.scan_qrcode_barcode.ui.qrcode.widget.BaseInputFieldView
+        android:id="@+id/viewPhoneSMS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"/>
+    <com.bkplus.scan_qrcode_barcode.ui.qrcode.widget.BaseInputDescriptionView
+        android:id="@+id/viewTextSMS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_30" />
+</androidx.appcompat.widget.LinearLayoutCompat>

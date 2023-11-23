@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_app_lock"
+        android:icon="@drawable/scan"
+        android:title="@string/scan" />
+    <item
+        android:id="@+id/menu_file_vault"
+        android:icon="@drawable/create"
+        android:title="@string/create" />
+    <item
+        android:id="@+id/menu_theme"
+        android:icon="@drawable/history"
+        android:title="@string/history" />
+    <item
+        android:id="@+id/menu_settings"
+        android:icon="@drawable/setting"
+        android:title="@string/setting" />
+</menu>

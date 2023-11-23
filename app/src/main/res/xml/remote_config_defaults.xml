@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<defaults>
+  <entry>
+    <key>banner</key>
+    <value>true</value>
+  </entry>
+  <entry>
+    <key>inter_gallery</key>
+    <value>true</value>
+  </entry>
+  <entry>
+    <key>inter_save</key>
+    <value>true</value>
+  </entry>
+  <entry>
+    <key>inter_splash</key>
+    <value>true</value>
+  </entry>
+  <entry>
+    <key>inter_trending_camera</key>
+    <value>true</value>
+  </entry>
+  <entry>
+    <key>native_language</key>
+    <value>true</value>
+  </entry>
+  <entry>
+    <key>native_save_successfully</key>
+    <value>true</value>
+  </entry>
+  <entry>
+    <key>native_trending_categories</key>
+    <value>true</value>
+  </entry>
+</defaults>

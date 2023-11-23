@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/splash_nav_graph"
+    app:startDestination="@id/splash_fragment">
+
+    <fragment
+        android:id="@+id/splash_fragment"
+        android:name="com.bkplus.scan_qrcode_barcode.ui.splash.SplashNavFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash_nav" />
+
+    <action
+        android:id="@+id/openFirstLanguage"
+        app:destination="@id/fristLanguageFragment" />
+    <fragment
+        android:id="@+id/fristLanguageFragment"
+        android:name="com.bkplus.scan_qrcode_barcode.ui.first_language.FirstLanguageFragment"
+        tools:layout="@layout/fragment_first_language" />
+
+    <action
+        android:id="@+id/openOnboarding"
+        app:destination="@id/onboardingFragment" />
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="com.bkplus.scan_qrcode_barcode.ui.splash.onboarding.OnboardFragment"
+        android:label="OnboardingFragment"
+        tools:layout="@layout/fragment_onboarding" />
+
+    <action
+        android:id="@+id/openMain"
+        app:destination="@id/mainActivity" />
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.bkplus.scan_qrcode_barcode.ui.home.HomeActivity"
+        android:label="HomeActivity"
+        tools:layout="@layout/fragment_home_nav" />
+
+</navigation>

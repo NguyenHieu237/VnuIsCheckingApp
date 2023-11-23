@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.qrcodegenerator.qrcodescan.allinone",
+  "variantName": "appProductRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 4,
+      "versionName": "1.0.0",
+      "outputFile": "QRCODE_v1.0.0(4)_01.13.2023-appProduct-release.apk"
+    }
+  ],
+  "elementType": "File"
+}

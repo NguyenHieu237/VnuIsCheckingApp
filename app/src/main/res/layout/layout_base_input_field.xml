@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_40"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@null"
+    android:orientation="horizontal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_base_input_field">
+
+        <ImageView
+            android:id="@+id/imgIconStart"
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_18"
+            android:layout_marginStart="@dimen/dp_24"
+            android:src="@drawable/ic_title_qr"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:importantForAccessibility="no" />
+
+        <EditText
+            android:id="@+id/edtContent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:background="@null"
+            android:hint="@string/qr_code_title"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="#0B0B0B"
+            android:textColorHint="#8E8E8E"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/imgIconEnd"
+            app:layout_constraintStart_toEndOf="@+id/imgIconStart" />
+
+        <ImageView
+            android:id="@+id/imgIconEnd"
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_18"
+            android:layout_marginEnd="@dimen/dp_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:id="@+id/txtLength"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:text="0/7"
+            app:layout_constraintBottom_toBottomOf="@+id/imgIconEnd"
+            app:layout_constraintEnd_toEndOf="@+id/imgIconEnd" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

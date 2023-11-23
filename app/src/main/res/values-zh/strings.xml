@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Preferences - Locale -->
+
+    <!-- Common -->
+    <string name="ad" translatable="false" tools:ignore="UnusedResources">Ad</string>
+    <string name="loading_ads">加载广告…</string>
+    <string name="cancel">取消</string>
+    <string name="qr_code">二维码</string>
+    <string name="barcode">条码</string>
+    <string name="qr_code_scanner">QR代码扫描仪</string>
+    <string name="language">语言</string>
+    <string name="privacy_policy">隐私政策</string>
+    <string name="card">卡片</string>
+    <string name="calendar">日历</string>
+    <string name="sms">短信</string>
+    <string name="email">电子邮件</string>
+    <string name="phone">电话</string>
+    <string name="contact">接触</string>
+    <string name="text">文本</string>
+    <string name="wifi">无线上网</string>
+    <string name="website">网站</string>
+    <string name="rate" translatable="false">Rate</string>
+    <string name="name">名称</string>
+    <string name="phone_number">电话号码</string>
+    <string name="address">地址</string>
+    <string name="dob">多布</string>
+    <string name="job">工作</string>
+    <string name="network_name">网络名称（SSID）</string>
+    <string name="password">密码</string>
+
+    <!--    QR Code-->
+    <string name="qr_code_all_day">一整天</string>
+    <string name="qr_code_description">描述</string>
+    <string name="qr_code_title">标题</string>
+    <string name="qr_code_day_start">一天开始</string>
+    <string name="qr_code_day_end">一天结束</string>
+    <string name="qr_code_create_qr">创建QR代码</string>
+    <string name="qr_code_enter_text">输入文字</string>
+    <string name="qr_code_name_contact">名称</string>
+    <string name="qr_code_number_contact">电话号码</string>
+    <string name="qr_code_email_contact">电子邮件地址</string>
+    <string name="qr_code_error_start_date">请选择开始日期</string>
+    <string name="qr_code_error_end_date">请选择结束日期</string>
+    <string name="qr_code_error_range_date">请再次选择结束日期</string>
+    <string name="qr_code_error_date_of_birth">请选择出生日期</string>
+    <string name="qr_code_error_website">请输入网站</string>
+    <string name="qr_code_error_name_contact">请输入名称</string>
+    <string name="qr_code_error_phone_contact">请输入电话号码</string>
+    <string name="qr_code_error_email_contact">请输入电子邮件</string>
+    <string name="qr_code_error_text">请输入文字</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <!--    Menu setting-->
+
+    <!--    QR code history-->
+
+</resources>
