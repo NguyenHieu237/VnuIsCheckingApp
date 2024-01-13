@@ -7,9 +7,9 @@ object Constants {
     const val MENU_SCAN = 0
     const val MENU_CREATE = 1
     const val MENU_HISTORY = 2
-    const val MENU_SETTING = 3
-    const val MENU_MANAGER = 4
-    const val MAX_MENU = 4
+    const val MENU_SETTING = 4
+    const val MENU_MANAGER = 3
+    const val MAX_MENU = 5
 
     const val LINK_STORE =
         "https://play.google.com/store/apps/details?id=${BuildConfig.APPLICATION_ID}&hl=en_IE"

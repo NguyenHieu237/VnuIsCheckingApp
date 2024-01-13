@@ -9,6 +9,7 @@ import com.ads.control.admob.AppOpenManager
 import com.bkplus.scan_qrcode_barcode.Constants.MAX_MENU
 import com.bkplus.scan_qrcode_barcode.Constants.MENU_CREATE
 import com.bkplus.scan_qrcode_barcode.Constants.MENU_HISTORY
+import com.bkplus.scan_qrcode_barcode.Constants.MENU_MANAGER
 import com.bkplus.scan_qrcode_barcode.Constants.MENU_SCAN
 import com.bkplus.scan_qrcode_barcode.Constants.MENU_SETTING
 import com.bkplus.scan_qrcode_barcode.R
@@ -16,6 +17,7 @@ import com.bkplus.scan_qrcode_barcode.base.BaseFragment
 import com.bkplus.scan_qrcode_barcode.databinding.FragmentHomeNavBinding
 import com.bkplus.scan_qrcode_barcode.preferences.QRCodePreferences
 import com.bkplus.scan_qrcode_barcode.ui.generator.GeneratorFragment
+import com.bkplus.scan_qrcode_barcode.ui.qrcode.ManagerTab.ListEventsFragment
 import com.bkplus.scan_qrcode_barcode.ui.qrcode.create_event.CreateEventFragment
 import com.bkplus.scan_qrcode_barcode.ui.qrcode.history.QRCodeHistoryFragment
 import com.bkplus.scan_qrcode_barcode.ui.qrcode.history.StudentHistory.StudentHistoryFragment
@@ -29,6 +31,7 @@ class HomeNavFragment : BaseFragment<FragmentHomeNavBinding>() {
     private var mCreateEventFragment: CreateEventFragment? = null
     private var mHistoryFragment: StudentHistoryFragment? = null
     private var mSettingsFragment: SettingsFragment? = null
+    private var mEventsFragment: ListEventsFragment? = null
     private val currentFragment = MutableLiveData(-1)
     private val mOnNavigationItemSelectedListener =
         NavigationBarView.OnItemSelectedListener { item ->
@@ -53,6 +56,12 @@ class HomeNavFragment : BaseFragment<FragmentHomeNavBinding>() {
                     binding.viewPager2.currentItem = MENU_SETTING
                     return@OnItemSelectedListener true
                 }
+
+                R.id.menu_manager -> {
+                    binding.viewPager2.currentItem = MENU_MANAGER
+                    return@OnItemSelectedListener true
+                }
+
             }
             false
         }
@@ -101,6 +110,11 @@ class HomeNavFragment : BaseFragment<FragmentHomeNavBinding>() {
                         binding.bottomNavigation.menu.findItem(R.id.menu_settings).isChecked =
                             true
                     }
+
+                    MENU_MANAGER -> {
+                        binding.bottomNavigation.menu.findItem(R.id.menu_manager).isChecked =
+                            true
+                    }
                 }
             }
         })
@@ -116,6 +130,7 @@ class HomeNavFragment : BaseFragment<FragmentHomeNavBinding>() {
         MENU_SCAN -> getFragmentForIndex(MENU_SCAN)
         MENU_CREATE -> getFragmentForIndex(MENU_CREATE)
         MENU_HISTORY -> getFragmentForIndex(MENU_HISTORY)
+        MENU_MANAGER -> getFragmentForIndex(MENU_MANAGER)
         else -> getFragmentForIndex(MENU_SETTING)
     }
 
@@ -124,6 +139,7 @@ class HomeNavFragment : BaseFragment<FragmentHomeNavBinding>() {
             MENU_SCAN -> mScannerFragment = ScannerFragment.newInstance()
             MENU_CREATE -> mCreateEventFragment = CreateEventFragment.newInstance()
             MENU_HISTORY -> mHistoryFragment = StudentHistoryFragment.newInstance()
+            MENU_MANAGER -> mEventsFragment = ListEventsFragment.newInstance()
             else -> mSettingsFragment = SettingsFragment.newInstance()
         }
         return handleOnNavigationItemSelected(position)
@@ -133,6 +149,7 @@ class HomeNavFragment : BaseFragment<FragmentHomeNavBinding>() {
         MENU_SCAN -> mScannerFragment ?: initFragmentAt(index)
         MENU_CREATE -> mCreateEventFragment ?: initFragmentAt(index)
         MENU_HISTORY -> mHistoryFragment ?: initFragmentAt(index)
+        MENU_MANAGER -> mEventsFragment ?: initFragmentAt(index)
         else -> mSettingsFragment ?: initFragmentAt(index)
     }
 }
