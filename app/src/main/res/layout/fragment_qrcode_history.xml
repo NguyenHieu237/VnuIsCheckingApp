@@ -26,7 +26,7 @@
             app:layoutManager="LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/toolbar"
-            tools:listitem="@layout/item_history" />
+            tools:listitem="@layout/layout_event_item" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/container_empty"
@@ -46,7 +46,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_history_empty"
-                android:importantForAccessibility="no" />
+                android:importantForAccessibility="no"
+                android:visibility="gone"/>
 
             <TextView
                 android:id="@+id/tvEmpty"
@@ -61,7 +62,8 @@
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/img_empty" />
+                app:layout_constraintTop_toBottomOf="@+id/img_empty"
+                android:visibility="gone"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

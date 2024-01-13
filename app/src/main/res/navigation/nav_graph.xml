@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/home_nav_fragment">
+    app:startDestination="@id/fragment_login">
 
     <fragment
         android:id="@+id/home_nav_fragment"
@@ -25,6 +25,15 @@
                 app:argType="com.bkplus.scan_qrcode_barcode.manager.qrcode.GenerateQRCodeResult"
                 app:nullable="true" />
         </action>
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_login"
+        android:name="com.bkplus.scan_qrcode_barcode.ui.Login.LoginFragment"
+        android:label="FragmentLogin"
+        tools:layout="@layout/fragment_log_in">
+        <action
+            android:id="@+id/gohome"
+            app:destination="@id/home_nav_fragment"/>
     </fragment>
 
     <fragment

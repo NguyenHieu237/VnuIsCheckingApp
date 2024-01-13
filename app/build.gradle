@@ -221,4 +221,11 @@ dependencies {
     kapt "androidx.hilt:hilt-compiler:1.0.0-alpha02"
     implementation 'com.tbuonomo:dotsindicator:4.3'
 
+    // API
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.6.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+
 }

@@ -13,6 +13,8 @@ class QRCodePreferences(context: Context) {
     private val prefsViewedOnboard = "prefsViewedOnboard"
     private val switch_beep = "switch_beep"
     private val switch_vibration = "switch_vibration"
+    private val studentToken = "student_token"
+    private val is_Admin = "is_admin"
 
     private val mPrefs = PreferenceManager.getDefaultSharedPreferences(context)
 
@@ -34,6 +36,11 @@ class QRCodePreferences(context: Context) {
             .apply()
     }
 
+    var token
+        get() = mPrefs.getString(studentToken, "")
+        set(value) = mPrefs.edit { putString(studentToken, value) }
+
+
     fun getValueBool(key: String?, def: Boolean): Boolean {
         return mPrefs.getBoolean(key, def)
     }
@@ -50,6 +57,10 @@ class QRCodePreferences(context: Context) {
     var switchVibration
         get() = mPrefs.getBoolean(switch_vibration,false)
         set(value) = mPrefs.edit().putBoolean(switch_vibration, value).apply()
+    var isAdmin
+        get() = mPrefs.getBoolean(is_Admin,false)
+        set(value) = mPrefs.edit().putBoolean(is_Admin, value).apply()
+
 
 
     companion object {

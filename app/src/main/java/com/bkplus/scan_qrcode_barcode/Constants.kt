@@ -8,6 +8,7 @@ object Constants {
     const val MENU_CREATE = 1
     const val MENU_HISTORY = 2
     const val MENU_SETTING = 3
+    const val MENU_MANAGER = 4
     const val MAX_MENU = 4
 
     const val LINK_STORE =

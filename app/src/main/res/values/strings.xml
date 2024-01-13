@@ -152,6 +152,7 @@
     <string name="history">History</string>
     <string name="setting">Setting</string>
     <string name="create">Create</string>
+    <string name="creator">Creator</string>
     <string name="scan">Scan</string>
 
     <string name="setting_en">English</string>

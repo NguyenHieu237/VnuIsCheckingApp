@@ -14,8 +14,11 @@ import com.bkplus.scan_qrcode_barcode.Constants.MENU_SETTING
 import com.bkplus.scan_qrcode_barcode.R
 import com.bkplus.scan_qrcode_barcode.base.BaseFragment
 import com.bkplus.scan_qrcode_barcode.databinding.FragmentHomeNavBinding
+import com.bkplus.scan_qrcode_barcode.preferences.QRCodePreferences
 import com.bkplus.scan_qrcode_barcode.ui.generator.GeneratorFragment
+import com.bkplus.scan_qrcode_barcode.ui.qrcode.create_event.CreateEventFragment
 import com.bkplus.scan_qrcode_barcode.ui.qrcode.history.QRCodeHistoryFragment
+import com.bkplus.scan_qrcode_barcode.ui.qrcode.history.StudentHistory.StudentHistoryFragment
 import com.bkplus.scan_qrcode_barcode.ui.scanner.ScannerFragment
 import com.bkplus.scan_qrcode_barcode.ui.settings.SettingsFragment
 import com.google.android.material.navigation.NavigationBarView
@@ -23,8 +26,8 @@ import com.google.android.material.navigation.NavigationBarView
 class HomeNavFragment : BaseFragment<FragmentHomeNavBinding>() {
 
     private var mScannerFragment: ScannerFragment? = null
-    private var mCreateFragment: GeneratorFragment? = null
-    private var mHistoryFragment: QRCodeHistoryFragment? = null
+    private var mCreateEventFragment: CreateEventFragment? = null
+    private var mHistoryFragment: StudentHistoryFragment? = null
     private var mSettingsFragment: SettingsFragment? = null
     private val currentFragment = MutableLiveData(-1)
     private val mOnNavigationItemSelectedListener =
@@ -57,26 +60,22 @@ class HomeNavFragment : BaseFragment<FragmentHomeNavBinding>() {
     override val layoutId: Int
         get() = R.layout.fragment_home_nav
 
-    override fun onResume() {
-        AppOpenManager.getInstance().enableAppResume()
-        super.onResume()
-    }
-
     override fun setupUI() {
         initiateNavigation()
-    }
-
-    override fun setupListener() {
-
     }
 
     private fun initiateNavigation() {
         val pagerAdapter = ScreenSlidePagerAdapter(requireActivity())
         binding.viewPager2.offscreenPageLimit = 2
         binding.viewPager2.adapter = pagerAdapter
-
         binding.bottomNavigation.setOnItemSelectedListener(mOnNavigationItemSelectedListener)
-
+        if(QRCodePreferences.getPrefsInstance().isAdmin) {
+            binding.bottomNavigation.menu.findItem( R.id.menu_theme).isVisible = false
+        }
+        else{
+            binding.bottomNavigation.menu.findItem( R.id.menu_manager).isVisible = false
+            binding.bottomNavigation.menu.findItem( R.id.menu_file_vault).isVisible = false
+        }
         binding.viewPager2.registerOnPageChangeCallback(object :
             ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
@@ -123,8 +122,8 @@ class HomeNavFragment : BaseFragment<FragmentHomeNavBinding>() {
     private fun initFragmentAt(position: Int): Fragment {
         when (position) {
             MENU_SCAN -> mScannerFragment = ScannerFragment.newInstance()
-            MENU_CREATE -> mCreateFragment = GeneratorFragment.newInstance()
-            MENU_HISTORY -> mHistoryFragment = QRCodeHistoryFragment.newInstance()
+            MENU_CREATE -> mCreateEventFragment = CreateEventFragment.newInstance()
+            MENU_HISTORY -> mHistoryFragment = StudentHistoryFragment.newInstance()
             else -> mSettingsFragment = SettingsFragment.newInstance()
         }
         return handleOnNavigationItemSelected(position)
@@ -132,7 +131,7 @@ class HomeNavFragment : BaseFragment<FragmentHomeNavBinding>() {
 
     private fun getFragmentForIndex(index: Int) = when (index) {
         MENU_SCAN -> mScannerFragment ?: initFragmentAt(index)
-        MENU_CREATE -> mCreateFragment ?: initFragmentAt(index)
+        MENU_CREATE -> mCreateEventFragment ?: initFragmentAt(index)
         MENU_HISTORY -> mHistoryFragment ?: initFragmentAt(index)
         else -> mSettingsFragment ?: initFragmentAt(index)
     }

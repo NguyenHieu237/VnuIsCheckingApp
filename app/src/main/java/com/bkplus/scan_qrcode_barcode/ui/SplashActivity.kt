@@ -23,6 +23,7 @@ import com.bkplus.scan_qrcode_barcode.utils.MyContextWrapper
 import com.bkplus.scan_qrcode_barcode.R
 import com.bkplus.scan_qrcode_barcode.databinding.ActivitySplashBinding
 import com.bkplus.scan_qrcode_barcode.preferences.QRCodePreferences
+import com.bkplus.scan_qrcode_barcode.ui.SplashActivity.Companion.isAdInterShowed
 import com.bkplus.scan_qrcode_barcode.ui.home.HomeActivity
 import com.bkplus.scan_qrcode_barcode.utils.RemoteUtils
 import dagger.hilt.android.AndroidEntryPoint
@@ -58,13 +59,6 @@ class SplashActivity : AppCompatActivity() {
         splashBinding = DataBindingUtil.setContentView(this, R.layout.activity_splash)
         mPrevConfig = Configuration(resources.configuration)
 
-        Admob.getInstance().setOpenActivityAfterShowInterAds(true)
-        if (!RemoteUtils.isShowAdsResume) {
-            AppOpenManager.getInstance().disableAppResumeWithActivity(SplashActivity::class.java)
-            AppOpenManager.getInstance().disableAppResumeWithActivity(HomeActivity::class.java)
-        } else {
-            AppOpenManager.getInstance().disableAppResume()
-        }
         startSplash()
     }
 
@@ -80,11 +74,7 @@ class SplashActivity : AppCompatActivity() {
         timer = object : CountDownTimer(timeDelay, timeInterval) {
             override fun onTick(millisUntilFinished: Long) {}
             override fun onFinish() {
-                if (RemoteUtils.isShowInterSplash) {
-                    loadAndShowInterAds()
-                } else {
-                    startMain()
-                }
+                startMain()
             }
         }
         (timer as CountDownTimer).start()
@@ -125,12 +115,6 @@ class SplashActivity : AppCompatActivity() {
         }
     }
 
-    private fun loadAndShowInterAds() {
-        AppOpenManager.getInstance().disableAppResume()
-        AperoAd.getInstance().loadSplashInterstitialAds(
-            this, BuildConfig.Inter_Splash, timeout, 5000, adListener
-        )
-    }
 
     override fun onStop() {
         super.onStop()

@@ -10,7 +10,9 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.media.MediaPlayer
 import android.os.*
+import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.camera.core.*
 import androidx.camera.lifecycle.ProcessCameraProvider
@@ -18,14 +20,20 @@ import androidx.core.app.ActivityCompat
 import androidx.core.os.bundleOf
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.ads.control.admob.AppOpenManager
 import com.bkplus.scan_qrcode_barcode.R
+import com.bkplus.scan_qrcode_barcode.Response.CheckinResponse
+import com.bkplus.scan_qrcode_barcode.Service.APIService
+import com.bkplus.scan_qrcode_barcode.base.API.CheckingAppAPi
 import com.bkplus.scan_qrcode_barcode.base.BaseFragment
 import com.bkplus.scan_qrcode_barcode.databinding.FragmentScannerBinding
 import com.bkplus.scan_qrcode_barcode.manager.database.QRCodeResult
 import com.bkplus.scan_qrcode_barcode.manager.database.QRCodeType
 import com.bkplus.scan_qrcode_barcode.manager.qrcode.GenerateQRCodeResult
+import com.bkplus.scan_qrcode_barcode.preferences.QRCodePreferences
+import com.bkplus.scan_qrcode_barcode.ui.SuccessPopUp
 import com.bkplus.scan_qrcode_barcode.ui.home.HomeActivity
 import com.bkplus.scan_qrcode_barcode.utils.BitmapUtils
 import com.bkplus.scan_qrcode_barcode.utils.extension.guardLet
@@ -33,6 +41,9 @@ import com.google.mlkit.vision.barcode.BarcodeScannerOptions
 import com.google.mlkit.vision.barcode.BarcodeScanning
 import com.google.mlkit.vision.barcode.common.Barcode
 import com.google.mlkit.vision.common.InputImage
+import kotlinx.coroutines.launch
+import retrofit2.Call
+import retrofit2.Response
 import java.util.concurrent.Executor
 
 class ScannerFragment : BaseFragment<FragmentScannerBinding>() {
@@ -43,6 +54,7 @@ class ScannerFragment : BaseFragment<FragmentScannerBinding>() {
     private var lens: Int = CameraSelector.LENS_FACING_BACK
     private lateinit var mShutterSound: MediaPlayer
     private val viewModel by activityViewModels<ScanResultViewModel>()
+
 
     companion object {
         private const val PICK_IMAGE = 1234
@@ -144,6 +156,7 @@ class ScannerFragment : BaseFragment<FragmentScannerBinding>() {
             if (barcode.rawValue != viewModel.barcode?.rawValue) {
                 viewModel.barcode = barcode
                 gotoResult(bitmap, barcode)
+                Log.e("scannnnnnn", "scannnn")
             } else {
 
             }
@@ -267,7 +280,13 @@ class ScannerFragment : BaseFragment<FragmentScannerBinding>() {
             qrCodeType = getBarcodeType(barcode = barcode),
         )
         val bundle = bundleOf("result" to result)
-        findNavController().navigate(R.id.scanResultFragment, bundle)
+        var token = QRCodePreferences.getPrefsInstance().token
+        var id = result.qrCodeContent.toInt()
+        Log.e("scannnnnnn", "$token")
+        Log.e("scannnnnnn", "${id}")
+        if (token != null) {
+            checkEvent(id, token)
+        }
     }
 
     private fun makeUICreateQRCode() {
@@ -276,7 +295,7 @@ class ScannerFragment : BaseFragment<FragmentScannerBinding>() {
 
     @RequiresApi(Build.VERSION_CODES.P)
     private fun switchCamera() {
-        if(lens == CameraSelector.LENS_FACING_BACK) lens = CameraSelector.LENS_FACING_FRONT
+        if (lens == CameraSelector.LENS_FACING_BACK) lens = CameraSelector.LENS_FACING_FRONT
         else lens = CameraSelector.LENS_FACING_BACK
         unbindCamera()
         cameraProvider?.let { bindPreview(it) }
@@ -327,4 +346,16 @@ class ScannerFragment : BaseFragment<FragmentScannerBinding>() {
             }
         }
     }
+
+    fun checkEvent(eventId: Int, token: String) {
+        viewModel.checkEvent(eventId, token)
+
+        // Observe changes in checkEventResponse LiveData
+        viewModel.checkEventResponse.observe(viewLifecycleOwner) { checkEventResponse ->
+            var message = checkEventResponse.message
+            var successPopUp = SuccessPopUp()
+            successPopUp!!.show(parentFragmentManager, null)
+        }
+    }
+
 }

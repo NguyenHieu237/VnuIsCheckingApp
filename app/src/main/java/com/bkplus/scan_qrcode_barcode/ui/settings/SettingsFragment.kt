@@ -15,7 +15,6 @@ import com.bkplus.scan_qrcode_barcode.base.BaseFragment
 import com.bkplus.scan_qrcode_barcode.databinding.FragmentSettingsBinding
 import com.bkplus.scan_qrcode_barcode.preferences.QRCodePreferences
 import com.bkplus.scan_qrcode_barcode.ui.PrivacyDialog
-import com.bkplus.scan_qrcode_barcode.ui.ratting.RattingDialog
 import com.bkplus.scan_qrcode_barcode.ui.scanner.ScannerFragment
 import com.bkplus.scan_qrcode_barcode.ui.settings.search_engine.SearchEngineDialog
 import com.google.android.gms.tasks.Task
@@ -146,12 +145,12 @@ class SettingsFragment : BaseFragment<FragmentSettingsBinding>() {
     }
 
     private fun showRattingDialog() {
-        val rateDialog = RattingDialog { isReview ->
-            if (isReview) {
-                goToReview()
-            }
-        }
-        rateDialog.show(childFragmentManager, "showRatingDialog")
+//        val rateDialog = RattingDialog { isReview ->
+//            if (isReview) {
+//                goToReview()
+//            }
+//        }
+//        rateDialog.show(childFragmentManager, "showRatingDialog")
     }
 
     private fun goToReview() {

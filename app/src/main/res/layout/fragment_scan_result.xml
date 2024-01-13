@@ -48,7 +48,8 @@
                     android:layout_marginTop="12dp"
                     android:background="@drawable/bg_base_input_field"
                     android:padding="12dp"
-                    app:layout_constraintTop_toBottomOf="@id/qrcode_image">
+                    app:layout_constraintTop_toBottomOf="@id/qrcode_image"
+                    android:visibility="gone">
 
                     <ImageView
                         android:id="@+id/icon"

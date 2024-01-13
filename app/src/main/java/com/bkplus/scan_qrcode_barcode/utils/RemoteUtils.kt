@@ -23,69 +23,69 @@ object RemoteUtils {
 
     var isShowInterSplash: Boolean
         get() = QRCodePreferences.getPrefsInstance().getValueBool(REMOTE_INTER_SPLASH, true)
-        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_INTER_SPLASH, value)
+        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_INTER_SPLASH, value = false)
 
     var isShowInterHistory: Boolean
         get() = QRCodePreferences.getPrefsInstance().getValueBool(REMOTE_INTER_HISTORY, true)
-        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_INTER_HISTORY, value)
+        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_INTER_HISTORY, value = false)
 
     var isShowInterSelectPhoto: Boolean
         get() = QRCodePreferences.getPrefsInstance().getValueBool(REMOTE_INTER_SELECT_PHOTO, true)
-        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_INTER_SELECT_PHOTO, value)
+        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_INTER_SELECT_PHOTO, value = false)
 
     var isShowInterNewQRCode: Boolean
         get() = QRCodePreferences.getPrefsInstance().getValueBool(REMOTE_INTER_NEW_QRCODE, true)
-        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_INTER_NEW_QRCODE, value)
+        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_INTER_NEW_QRCODE, value = false)
 
     var isShowInterQRCodeMenu: Boolean
         get() = QRCodePreferences.getPrefsInstance().getValueBool(REMOTE_INTER_QRCODE_MENU, true)
-        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_INTER_QRCODE_MENU, value)
+        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_INTER_QRCODE_MENU, value = false)
 
     var isShowNativeLanguage: Boolean
         get() = QRCodePreferences.getPrefsInstance().getValueBool(REMOTE_NATIVE_LANGUAGE, true)
-        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_NATIVE_LANGUAGE, value)
+        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_NATIVE_LANGUAGE, value = false)
 
     var isShowNativeWifi: Boolean
         get() = QRCodePreferences.getPrefsInstance().getValueBool(REMOTE_NATIVE_WIFI, true)
-        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_NATIVE_WIFI, value)
+        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_NATIVE_WIFI, value = false)
 
     var isShowNativeWebsite: Boolean
         get() = QRCodePreferences.getPrefsInstance().getValueBool(REMOTE_NATIVE_WEBSITE, true)
-        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_NATIVE_WEBSITE, value)
+        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_NATIVE_WEBSITE, value = false)
 
     var isShowNativeText: Boolean
         get() = QRCodePreferences.getPrefsInstance().getValueBool(REMOTE_NATIVE_TEXT, true)
-        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_NATIVE_TEXT, value)
+        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_NATIVE_TEXT, value = false)
 
     var isShowNativeContact: Boolean
         get() = QRCodePreferences.getPrefsInstance().getValueBool(REMOTE_NATIVE_CONTACT, true)
-        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_NATIVE_CONTACT, value)
+        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_NATIVE_CONTACT, value = false)
 
     var isShowNativePhone: Boolean
         get() = QRCodePreferences.getPrefsInstance().getValueBool(REMOTE_NATIVE_PHONE, true)
-        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_NATIVE_PHONE, value)
+        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_NATIVE_PHONE, value = false)
 
     var isShowNativeEmail: Boolean
         get() = QRCodePreferences.getPrefsInstance().getValueBool(REMOTE_NATIVE_EMAIL, true)
-        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_NATIVE_EMAIL, value)
+        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_NATIVE_EMAIL, value = false)
 
     var isShowNativeDetail: Boolean
         get() = QRCodePreferences.getPrefsInstance().getValueBool(REMOTE_NATIVE_DETAIL, true)
-        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_NATIVE_DETAIL, value)
+        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_NATIVE_DETAIL, value = false)
 
     var isShowNativeHistoryList: Boolean
         get() = QRCodePreferences.getPrefsInstance().getValueBool(REMOTE_NATIVE_HISTORY_LIST, true)
-        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_NATIVE_HISTORY_LIST, value)
+        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_NATIVE_HISTORY_LIST, value = false)
 
     var isShowScanBanner: Boolean
         get() = QRCodePreferences.getPrefsInstance().getValueBool(REMOTE_SCAN_BANNER, true)
-        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_SCAN_BANNER, value)
+        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_SCAN_BANNER, value = false)
 
     var isShowQRCodeMenuBanner: Boolean
         get() = QRCodePreferences.getPrefsInstance().getValueBool(REMOTE_QRCODE_MENU_BANNER, true)
-        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_QRCODE_MENU_BANNER, value)
+        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_QRCODE_MENU_BANNER, value = false)
 
     var isShowAdsResume: Boolean
         get() = QRCodePreferences.getPrefsInstance().getValueBool(REMOTE_ADS_RESUME, true)
-        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_ADS_RESUME, value)
+        set(value) = QRCodePreferences.getPrefsInstance().setValueBool(REMOTE_ADS_RESUME, value = false)
 }

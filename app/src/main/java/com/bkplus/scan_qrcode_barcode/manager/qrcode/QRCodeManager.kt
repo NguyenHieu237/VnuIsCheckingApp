@@ -6,6 +6,7 @@ import android.text.TextUtils
 import android.util.Patterns
 import com.bkplus.scan_qrcode_barcode.manager.database.QRCodeResult
 import com.bkplus.scan_qrcode_barcode.manager.database.QRCodeType
+import com.bkplus.scan_qrcode_barcode.ui.qrcode.scheme.EventCard
 import com.bkplus.scan_qrcode_barcode.ui.qrcode.scheme.MVCard
 import com.bkplus.scan_qrcode_barcode.ui.qrcode.scheme.VSMS
 import com.bkplus.scan_qrcode_barcode.ui.qrcode.widget.TimeUtils
@@ -158,6 +159,19 @@ class QRCodeManager {
         card.title = title
         card.phoneNumber = phoneNumber
         card.birthday = birthday
+        return GenerateQRCodeResult(
+            qrCodeBitmap = QRCode.from(card.generateString()).bitmap(),
+            qrCodeContent = card.generateString(),
+            resultType = QRCodeResult.CREATE.type,
+        )
+    }
+
+    fun generateEventQRCode(title: String,creator: String,date: String, address: String): GenerateQRCodeResult {
+        val card = EventCard()
+        card.title = title
+        card.creator = creator
+        card.address = address
+        card.date = date
         return GenerateQRCodeResult(
             qrCodeBitmap = QRCode.from(card.generateString()).bitmap(),
             qrCodeContent = card.generateString(),
